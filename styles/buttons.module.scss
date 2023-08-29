@@ -1,0 +1,78 @@
+.headerMain {
+  padding: 50px 50px 25px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.headerContainer {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.topButtons {
+  gap: 20px;
+  display: flex;
+}
+
+.topBtn {
+  border: none;
+  width: 35px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upperLabel {
+  position: relative;
+}
+
+.inputIcon {
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+  position: absolute;
+  left: 14px;
+  top: 8px;
+}
+
+.inputSearch {
+  border: none;
+  padding: 8px 15px 10px 38px;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+
+  &:focus {
+    border: none;
+    width: 450px;
+  }
+}
+
+.clearIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.3;
+  position: absolute;
+  right: 25px;
+  top: 9px;
+  cursor: pointer;
+}
+
+.clearIcon:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 576px) {
+  .inputSearch {
+    width: 250px;
+
+    &:focus {
+      width: 300px;
+    }
+  }
+}

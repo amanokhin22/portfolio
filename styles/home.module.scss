@@ -1,0 +1,168 @@
+.title {
+  margin-bottom: 50px;
+  border: 5px solid #a38a37;
+}
+
+.major {
+  padding: 30px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.name {
+  padding: 0 0 20px 0;
+  font-size: 28px;
+}
+
+.contacts {
+  border-bottom: 5px solid #a38a37;
+}
+
+.contacts a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.contacts a:last-child {
+  margin-bottom: 20px;
+}
+
+
+.social a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.social a {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+
+.titleDiv {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.summaryTitle {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  background-color: #343546;
+  color: white;
+  justify-content: center;
+  display: flex;
+}
+
+.summaryText {
+  text-align: justify;
+  text-indent: 25px;
+  margin-bottom: 50px;
+}
+
+.link {
+  color: blueviolet;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.skills {
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+.skillsTitle {
+  text-align: justify;
+  color: whitesmoke;
+}
+
+.skillsList {
+  text-align: justify;
+  padding: 25px;
+}
+
+.education {
+  text-align: justify;
+  padding: 15px 0;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleEducation {
+  color: whitesmoke;
+}
+
+.highlights {
+  margin-bottom: 50px;
+}
+
+.titleHighLights {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  background-color: #343546;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+
+.highlightsList {
+  text-align: justify;
+  padding: 25px;
+}
+
+.experience {
+  text-align: justify;
+  padding: 15px;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceTitle {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  background-color: #343546;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+}
+
+.experienceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  .contacts {
+    gap: 10px;
+  }
+  .highlights {
+    gap: 10px;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+
+}

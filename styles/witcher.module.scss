@@ -1,0 +1,91 @@
+.witcherWrapper {
+  background-color: #000000;
+  height: 100vh;
+}
+
+.slider {
+  height: 100%;
+}
+
+.sliderWrapper {
+  will-change: transform;
+  transform-style: preserve-3d;
+  transition: var(--transitionWitcher)!important;
+}
+
+.swiperSlide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform
+}
+.sliderItem {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.sliderLayer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  transition: var(--transitionWitcher)!important;
+}
+.sliderLayer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  box-shadow: inset 0 0 250px rgb(0 0 0 / .3);
+}
+
+.sliderLayerBack {
+  background-image: url("/layer-back1.jpg");
+  height: 100%;
+}
+.sliderLayerMiddle {
+  background-image: url("/layer-middle1.png");
+  height: 100%;
+}
+.sliderLayerFront {
+  background-image: url("/layer-front1.png");
+  height: 100%;
+}
+
+
+.sliderLayerBack2 {
+  background-image: url("/layer-back2.jpg");
+  height: 100%;
+}
+.sliderLayerGera2 {
+  background-image: url("/layer-gera2.png");
+  height: 100%;
+}
+.sliderLayerYen2 {
+  background-image: url("/layer-yen2.png");
+  height: 100%;
+}
+.sliderLayerFront2 {
+  background-image: url("/layer-front2.png");
+  height: 100%;
+}
+
+
+.sliderLayerBack3 {
+  background-image: url("/layer-back3.jpg");
+  height: 100%;
+}
+.sliderLayerMiddle3 {
+  background-image: url("/layer-middle3.png");
+  height: 100%;
+}
+.sliderLayerCiri3 {
+  background-image: url("/layer-ciri3.png");
+  height: 100%;
+}
+.sliderLayerFront3 {
+  background-image: url("/layer-front3.png");
+  height: 100%;
+}

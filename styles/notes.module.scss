@@ -1,0 +1,28 @@
+.notesWrapper {
+  position: relative;
+  line-height: 1.55;
+}
+
+.notesContainer {
+  flex-direction: row;
+  padding: 40px 20px;
+}
+@media (max-width: 992px) {
+  .notesContainer {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: justify;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .notesContainer {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .notesContainer {
+    padding: 0!important;
+  }
+}

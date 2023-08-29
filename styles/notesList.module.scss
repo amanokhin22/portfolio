@@ -1,0 +1,40 @@
+.listContainer {
+  width: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: left;
+}
+
+.listContainer::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 5px;
+}
+
+.listContainer::-webkit-scrollbar {
+  width: 0.5em;
+  border-radius: 5px;
+}
+
+.listContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 1200px) {
+  .listContainer {
+    width: 350px;
+  }
+}
+@media (max-width: 992px) {
+  .listContainer {
+    overflow-y: unset;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 576px) {
+  //.listContainer {
+  //  margin: 0 auto;
+  //}
+}
