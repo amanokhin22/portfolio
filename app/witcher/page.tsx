@@ -12,7 +12,6 @@ import {Character} from "@/app/witcher/types/WitcherTypes";
 
 
 export default function Witcher() {
-    const models = useAppSelector(selectActiveModelsId);
     const modelsList = useAppSelector(selectModelsList);
     const dispatch = useAppDispatch();
     const [showModels, setShowModels] = useState(false);

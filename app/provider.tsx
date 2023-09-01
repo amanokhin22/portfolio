@@ -9,4 +9,4 @@ export function ReduxProvider({children}: { children: ReactNode }) {
             {children}
         </Provider>
     )
-};
+}
