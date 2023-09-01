@@ -17,7 +17,7 @@ export const Modal: FC<ModelsTypes> = ({onClose, isOpen, item}) => {
                     </button>
                     <div className={styles.modalInfo}>
                         <h2 className={styles.modalTitle}>{item?.title}</h2>
-                        <Image className={styles.modalImage} width={250} height={400} src={item?.image}
+                        <Image className={styles.modalImage} width={250} height={400} src={item?.image!}
                                alt="image"></Image>
                         <div className={styles.modalBody}>{item?.content}</div>
                     </div>
