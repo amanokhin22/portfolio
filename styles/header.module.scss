@@ -1,4 +1,3 @@
-
 .headerWrapper {
   position: fixed;
   top: 0;
@@ -92,14 +91,6 @@
   list-style-type: none;
 }
 
-@media screen and (max-width: 1200px) {
-
-}
-
-@media (max-width: 992px) {
-
-}
-
 @media screen and (max-width: 768px) {
   .navbar {
     display: none;
@@ -130,9 +121,4 @@
     display: block;
     z-index: 11;
   }
-}
-
-
-@media screen and (max-width: 576px) {
-
 }

@@ -1,72 +1,52 @@
 "use client"
 
 import styles from "../../styles/witcher.module.scss";
-import {Swiper, SwiperSlide} from 'swiper/react';
-// @ts-ignore
-import {Swiper as SwiperType, Autoplay} from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
+import {useAppDispatch, useAppSelector} from "@/store/Hooks";
+import {selectActiveModelsId, selectModelsList} from "@/selectors/selectors";
+import {useEffect, useState} from "react";
+import {fetchModels} from "@/redux/asyncThunk";
+import {setActiveModelsId} from "@/redux/witcherSlice";
+import {Modal} from "@/app/witcher/components/Modal";
+import 'bootstrap/dist/css/bootstrap-grid.css';
+import {Character} from "@/app/witcher/types/WitcherTypes";
+
 
 export default function Witcher() {
+    const models = useAppSelector(selectActiveModelsId);
+    const modelsList = useAppSelector(selectModelsList);
+    const dispatch = useAppDispatch();
+    const [showModels, setShowModels] = useState(false);
+    const [currentItem, setCurrentItem] = useState<Character | null>(null);
+
+    useEffect(() => {
+        dispatch(fetchModels())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const openModal = (event: React.MouseEvent<HTMLSpanElement>, item: Character) => {
+        // @ts-ignore
+        dispatch(setActiveModelsId(event.target.value));
+        setShowModels(true);
+        setCurrentItem(item)
+    };
+
+    const handleClose = () => {
+        setShowModels(false);
+        setCurrentItem(null)
+    };
 
     return (
         <div className={styles.witcherWrapper}>
-            <div className={"swiper " + styles.slider}>
-                <div className={styles.slider}>
-                    <div className={"swiper-wrapper" + styles.sliderWrapper}>
-                        <div className={styles.swiperSlide}>
-                            <div className={styles.sliderItem}>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerBack}></div>
-                                </div>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerMiddle}></div>
-                                </div>
-                                <canvas className="particles slider__layer" data-swiper-parallax="18%"
-                                        data-color="#BE9164"></canvas>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerFront}></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.swiperSlide}>
-                            <div className={styles.sliderItem}>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerBack2}></div>
-                                </div>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerGera2}></div>
-                                </div>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerYen2}></div>
-                                </div>
-                                <canvas className="particles slider__layer" data-swiper-parallax="20%"
-                                        data-color="#525A6D"></canvas>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerFront2}></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.swiperSlide}>
-                            <div className={styles.sliderItem}>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerBack3}></div>
-                                </div>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerMiddle3}></div>
-                                </div>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerCiri3}></div>
-                                </div>
-                                <canvas className="particles slider__layer" data-swiper-parallax="25%"
-                                        data-color="#938086"></canvas>
-                                <div className={styles.sliderLayer}>
-                                    <div className={styles.sliderLayerFront3}></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className={"content " + styles.witcherContent}>
+                <span className={styles.witcherTitle}>Choose your favorite character</span>
+                <div className={"row " + styles.titlesBlock}>
+                    {modelsList.map((item) => (
+                        <span onClick={(event) => openModal(event, item)}
+                              className={"col-lg-4 col-md-4 col-sm-12 " + styles.names}
+                              key={item.id}>{item.selectTitle}</span>
+                    ))}
                 </div>
+                {showModels && <Modal item={currentItem} isOpen={true} onClose={handleClose}/>}
             </div>
         </div>
     );

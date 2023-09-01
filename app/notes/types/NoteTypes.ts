@@ -1,11 +1,10 @@
-
-
 export interface NoteTypes {
     id: number;
     title: string;
     description: string;
     date: Date
 }
+
 export interface HeaderProps {
     onCreateItem: (newTitle: string, newDescription: string) => void;
     onRemoveItem: () => void;
@@ -14,6 +13,7 @@ export interface HeaderProps {
     onSearch: (term: string) => void;
     onClearSearch: () => void;
 }
+
 export interface SearchType {
     onSearch: (searchTerm: string) => void;
     onClearSearch: () => void;

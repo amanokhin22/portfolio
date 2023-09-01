@@ -70,4 +70,4 @@ export const Search: FC<SearchType> = ({onSearch, onClearSearch}) => {
             )}
         </div>
     )
-}
+};

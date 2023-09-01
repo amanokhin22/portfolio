@@ -4,7 +4,15 @@ import {Search} from "@/app/notes/components/Search";
 import {FC} from "react";
 import {HeaderProps} from "@/app/notes/types/NoteTypes";
 import 'bootstrap/dist/css/bootstrap-grid.css';
-export const Buttons:FC<HeaderProps> = ({onCreateItem, onClearSearch, onRemoveItem, activeItem, onEditItem, onSearch}) => {
+
+export const Buttons: FC<HeaderProps> = ({
+                                             onCreateItem,
+                                             onClearSearch,
+                                             onRemoveItem,
+                                             activeItem,
+                                             onEditItem,
+                                             onSearch
+                                         }) => {
 
     const handlePlusButtonClick = () => {
         onCreateItem('', '');
@@ -33,4 +41,4 @@ export const Buttons:FC<HeaderProps> = ({onCreateItem, onClearSearch, onRemoveIt
             </div>
         </div>
     )
-}
+};

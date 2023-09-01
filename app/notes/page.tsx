@@ -1,5 +1,4 @@
 "use client"
-
 import styles from "../../styles/notes.module.scss";
 import 'bootstrap/dist/css/bootstrap-grid.css';
 import {NotesList} from "@/app/notes/components/NotesList";
@@ -11,8 +10,7 @@ import {useSearch} from "@/app/notes/hooks/useSearch";
 import {apiNote} from "@/app/notes/api/apiNotes";
 import {ViewSpace} from "@/app/notes/components/ViewSpace";
 
-
-export default function Notes () {
+export default function Notes() {
 
     const [items, setItems] = useState<NoteTypes[]>([]);
     const [activeItem, setActiveItem] = useState<NoteTypes | null>(null);
@@ -76,14 +74,14 @@ export default function Notes () {
     }, []);
     return (
         <div className={"container-fluid " + styles.notesWrapper}>
-                <Buttons
-                    onCreateItem={handleCreateItem}
-                    onRemoveItem={handleRemoveItem}
-                    activeItem={activeItem}
-                    onEditItem={handleEditItem}
-                    onSearch={handleSearch}
-                    onClearSearch={handleClearSearch}
-                />
+            <Buttons
+                onCreateItem={handleCreateItem}
+                onRemoveItem={handleRemoveItem}
+                activeItem={activeItem}
+                onEditItem={handleEditItem}
+                onSearch={handleSearch}
+                onClearSearch={handleClearSearch}
+            />
             <div className={"row " + styles.notesContainer} style={{padding: 20}}>
                 <div className="col-lg-4 col-md-4 col-sm-12">
                     <NotesList
@@ -107,4 +105,4 @@ export default function Notes () {
             </div>
         </div>
     )
-}
+};

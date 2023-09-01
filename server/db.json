@@ -1,0 +1,45 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Some new note",
+      "description": "Abracadabra-shvabra",
+      "date": "2023-08-23T18:11:45.521Z"
+    },
+    {
+      "id": 2,
+      "title": "Some new second note",
+      "description": "Sim sim - opening",
+      "date": "11.07.2023"
+    },
+    {
+      "id": 5,
+      "title": "It`s third note in my list",
+      "description": "We have an array of notes in my db.json - file. with axios we could get these array, create new notes and put them to the that array, delete notes and edit themdfsssssssssssssssssssssssssssssssssssssssssssssssssssssssssss sssssssssssssssssssssssssssssssssss sssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssssssssss ssssssssssssssssssssssssssssssssssssssssssssssss vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvvvvvvvvvvv vvvvvvvvvvvvvvиииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииииии",
+      "date": "2023-07-12T11:23:24.782Z"
+    }
+  ],
+  "images": [
+    {
+      "id": "1",
+      "selectTitle": "Geralt",
+      "title": "The last witcher",
+      "image": "/geralt.jpg",
+      "content": "Geralt of Rivia, also known as Gwynbleidd (Elder Speech: \"White Wolf\") and the Butcher of Blaviken, is the protagonist of the series and its adaptations, a witcher who travels the Continent and makes a living hunting monsters that plague the land."
+    },
+    {
+      "id": "2",
+      "selectTitle": "Yennefer",
+      "title": "Сunning bitch",
+      "image": "/yennefer.jpg",
+      "content": "Yennefer of Vengerberg. She is a powerful sorceress, is a mother figure to Ciri, and becomes Geralt's lover."
+    },
+    {
+      "id": "3",
+      "selectTitle": "Ciri",
+      "title": "Waif",
+      "image": "/ciri.jpg",
+      "content": "Cirilla Fiona Elen Riannon (known as \"Ciri\", from the name Zireael in Elder Speech (meaning \"Swallow\";)), also known as the Lion Cub of Cintra, Child of the Elder Blood, Falka, and the Lady of Time and Space. Cirilla is the princess of Cintra, daughter of Pavetta and Duny (also known as the Urcheon of Erlenwald) and granddaughter of Queen Calanthe."
+    }
+  ]
+}

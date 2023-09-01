@@ -12,7 +12,9 @@
     --gutter: 30px;
     --side-small: 26;
     --size-big: 36;
-    --transitionWitcher: 1.75s cubic-bezier(.2, .6, 0, 1);
+    --black: #141414;
+    --transitionParralax: 1.25s cubic-bezier(.2, .5, 0, 1);
+    --transition-cursor: 2s cubic-bezier(.05, .5, 0, 1);
 }
 
 * {
@@ -51,4 +53,3 @@ main {
     margin-top: 82px;
     z-index: 2;
 }
-

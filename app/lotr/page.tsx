@@ -4,7 +4,7 @@ import Image from "next/image";
 import {useEffect, useRef, useState} from "react";
 import Link from "next/link";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 // @ts-ignore
 import {Swiper as SwiperType, Autoplay} from "swiper";
 import "swiper/css";
@@ -129,7 +129,8 @@ export default function Lotr() {
                             <h3 className={styles.videoTitle}>The Return of the King</h3>
                             <p>Sauron sends a great army against Gondor. Gandalf arrives at Minas Tirith to warn
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
-                                Denethor of the attack, while Théoden musters the Rohirrim to ride to Gondor's aid. Minas Tirith is
+                                Denethor of the attack, while Théoden musters the Rohirrim to ride to Gondor's aid.
+                                Minas Tirith is
                                 besieged;
                                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                                 the Lord of the Nazgûl uses a spell-wound battering ram to destroy the city's gates.
@@ -188,7 +189,9 @@ export default function Lotr() {
                                         <SwiperSlide key={index}>
                                             <div className={styles.showCaseCarouselItem}>
                                                 <div className={styles.showCaseCarouselImageWrapper}>
-                                                    <Image className={styles.showCaseCarouselImage} priority={true} src={item.image} width={360} height={400} alt="alt"></Image></div>
+                                                    <Image className={styles.showCaseCarouselImage} priority={true}
+                                                           src={item.image} width={360} height={400} alt="alt"></Image>
+                                                </div>
                                                 <p>{item.name}</p>
                                             </div>
                                         </SwiperSlide>
@@ -209,4 +212,4 @@ export default function Lotr() {
             </div>
         </section>
     )
-}
+};

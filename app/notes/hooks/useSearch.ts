@@ -1,7 +1,7 @@
 import {NoteTypes} from "../types/NoteTypes";
 import {useMemo, useState} from "react";
 
-export const useSearch = (items: NoteTypes[] ) => {
+export const useSearch = (items: NoteTypes[]) => {
     const [searchTerm, setSearchTerm] = useState<string>('');
     const handleSearch = (term: string) => {
         setSearchTerm(term);

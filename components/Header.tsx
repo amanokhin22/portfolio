@@ -48,7 +48,7 @@ export const Header = () => {
                                 {burgerOpened
                                     ? <Image width={35} height={35} src="/close.svg" alt="close"/>
                                     : <Image width={35} height={35} src="/burgerMenu.svg" alt="burgerMenu"/>}
-                </span>
+                        </span>
                     </div>
                 </div>
             </div>
