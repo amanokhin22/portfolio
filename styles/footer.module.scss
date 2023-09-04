@@ -34,7 +34,6 @@
   width: 1px;
   height: 32px;
   background-color: rgb(196, 196, 196);
-  margin: 0 24px 0 0;
 }
 
 .footerUl {
@@ -107,12 +106,21 @@
   .firstBlock {
     gap: 10px;
   }
+  .secondBlock {
+    gap: 20px;
+  }
+  .separateLine {
+    display: none;
+  }
+  .footerUl {
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .topLine {
     gap: 20px;
-    margin: 0;
+    justify-content: center;
   }
   .firstBlock {
     justify-content: center;
@@ -129,7 +137,7 @@
 
 @media screen and (max-width: 576px) {
   .topLine {
-    margin: 0;
+    margin: 0 auto!important;
   }
   .divIcon {
     display: none;
@@ -139,5 +147,6 @@
   }
   .secondBlock {
     flex-direction: column;
+    gap: 15px;
   }
 }

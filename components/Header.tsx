@@ -23,6 +23,9 @@ export const Header = () => {
             window.removeEventListener("scroll", changeColorOnScroll);
         };
     }, []);
+    const closeBurgerMenu = () => {
+        setBurgerOpened(false);
+    };
     return (
         <header className={styles.headerWrapper + " " + (colorAfterScroll ? styles.headerBg : "")}>
             <div className="container">
@@ -35,13 +38,13 @@ export const Header = () => {
 
                         <div className={burgerOpened ? styles.navbar + " " + styles.navbarWrapperShow : styles.navbar}>
 
-                            <Link href="/">CV</Link>
+                            <Link onClick={closeBurgerMenu} href="/">CV</Link>
 
-                            <Link href="/lotr">LoTR</Link>
+                            <Link onClick={closeBurgerMenu} href="/lotr">LoTR</Link>
 
-                            <Link href="/witcher">Witcher</Link>
+                            <Link onClick={closeBurgerMenu} href="/witcher">Witcher</Link>
 
-                            <Link href="/notes">Notes</Link>
+                            <Link onClick={closeBurgerMenu} href="/notes">Notes</Link>
 
                         </div>
                         <span className={styles.burger} onClick={() => setBurgerOpened(!burgerOpened)}>
