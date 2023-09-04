@@ -22,7 +22,7 @@ export default function CV() {
             </div>
             <div className={"row " + styles.summary}>
                 <div className={"col-12 " + styles.titleDiv}>
-                    <span className={styles.summaryTitle}>SUMMARY</span>
+                    <h1 className={styles.summaryTitle}>SUMMARY</h1>
                 </div>
                 <div className={"col-12 " + styles.summaryText}>
                     I am a front-end developer with over a year of freelancing experience and personal projects hosted
@@ -75,7 +75,7 @@ export default function CV() {
                     </div>
                 </div>
                 <div className={"col-lg-8 col-md-8 col-sm-12 " + styles.highlightsText}>
-                    <div className={styles.titleHighLights}>HIGHLIGHTS</div>
+                    <h2 className={styles.titleHighLights}>HIGHLIGHTS</h2>
                     <ul className={styles.highlightsList}>
                         <li>Writing HTML/CSS using Figma designs</li>
                         <li>Development using React, hooks, Redux, React Routing, Context</li>
@@ -94,7 +94,7 @@ export default function CV() {
                         <li>Over 2500 hours of web development learning</li>
                     </ul>
                     <div className={styles.experience}>
-                        <div className={styles.experienceTitle}>EXPERIENCE</div>
+                        <h2 className={styles.experienceTitle}>EXPERIENCE</h2>
                         <div className={styles.experienceBlock}>
                             <span>Nov 2022 - present</span>
                             <span>Freelance in Maksym Hrom`s team</span>
